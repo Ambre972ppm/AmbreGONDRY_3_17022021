@@ -22,3 +22,5 @@ leur mise en page est libre.
 ** Les pages devront passer la validation W3C en HTML et CSS sans erreur.
 ** Le site doit être parfaitement compatible avec les dernières versions desktop de
 Chrome et Firefox.
+
+>> https://ambre972ppm.github.io/AmbreGONDRY_3_17022021/html/index.html <<
