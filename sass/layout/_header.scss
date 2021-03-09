@@ -1,0 +1,28 @@
+/*home header*/
+header{
+    padding: 1rem;
+    box-shadow: 2px 2px 5px 2px rgba(39, 39, 39, 0.199);
+    position: relative;
+    text-align: center;
+    & .fas{
+        font-size: 28px;
+    }
+}
+.header__logo{
+    @include logo-size;
+    @include margin;
+}
+/*home header*/
+
+/*menu pages header*/
+.header__menu{
+    text-align: left;
+    & div{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    & img{
+        width: 10rem;
+    }
+}
+/*menu pages header*/

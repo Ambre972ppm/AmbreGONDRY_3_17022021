@@ -25,48 +25,6 @@ img {
   font-size: 20px;
 }
 
-.logo, .footer__logo, .header__logo {
-  width: 12rem;
-}
-
-.home, .header__logo {
-  margin: auto;
-}
-
-.padding, .restaurant, .operation {
-  padding-top: 2rem;
-  padding-bottom: 3rem;
-}
-
-.placement, .position {
-  display: flex;
-  justify-content: center;
-}
-
-.button, .order__button, .search__button {
-  box-shadow: 0 4px 8px 0 rgba(39, 39, 39, 0.2);
-  padding: 1rem;
-  border-radius: 2rem;
-  border: 1px solid transparent;
-  background: linear-gradient(#FF79DA, #9356DC);
-  color: white;
-  align-items: center;
-  align-content: center;
-  text-align: center;
-  margin: auto;
-  width: 12rem;
-}
-.button:hover, .order__button:hover, .search__button:hover {
-  box-shadow: 0 4px 10px 0 rgba(39, 39, 39, 0.363);
-  background: linear-gradient(#ff79d9af, #9256dcb0);
-}
-.button a, .order__button a, .search__button a {
-  color: white;
-  font-weight: bold;
-}
-
-/*general settings*/
-/*Home settings*/
 /*home header*/
 header {
   padding: 1rem;
@@ -78,13 +36,33 @@ header .fas {
   font-size: 28px;
 }
 
+.header__logo {
+  width: 12rem;
+  margin: auto;
+}
+
 /*home header*/
+/*menu pages header*/
+.header__menu {
+  text-align: left;
+}
+.header__menu div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.header__menu img {
+  width: 10rem;
+}
+
+/*menu pages header*/
 /*position section*/
 .position {
   background-color: #eaeaea;
   align-items: center;
   font-size: larger;
   color: black;
+  display: flex;
+  justify-content: center;
 }
 .position i {
   color: black;
@@ -98,8 +76,35 @@ header .fas {
   background: #f6f6f6;
   padding: 2rem 2rem 3rem 2rem;
 }
+.search__button {
+  box-shadow: 0 4px 8px 0 rgba(39, 39, 39, 0.2);
+  padding: 1rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  margin: auto;
+  width: 12rem;
+}
+.search__button:hover {
+  box-shadow: 0 4px 10px 0 rgba(39, 39, 39, 0.363);
+  background: linear-gradient(#ff79d9af, #9256dcb0);
+}
+.search__button a {
+  color: white;
+  font-weight: bold;
+}
+
 /*search section*/
 /*operation section*/
+.operation {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
 .operation__title {
   padding-left: 1.5rem;
 }
@@ -150,12 +155,15 @@ li {
 /*Restaurant Home*/
 .restaurant {
   background-color: #f6f6f6;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
 }
 
 .restaurant__title {
   padding-left: 1.5rem;
 }
 
+/*Restaurant Home*/
 .restaurant-card__prev {
   display: grid;
   grid-template-rows: 70% 30%;
@@ -165,9 +173,20 @@ li {
   border-radius: 1.2rem;
   height: 250px;
   margin: 1rem;
+  position: relative;
 }
 .restaurant-card__prev:hover {
   box-shadow: 0 4px 10px 0 rgba(39, 39, 39, 0.363);
+}
+.restaurant-card__prev .new {
+  position: absolute;
+  color: #008766;
+  font-weight: bold;
+  background-color: #99e2d0;
+  padding: 0.5rem;
+  border-radius: 5%;
+  top: 0.5rem;
+  right: 1rem;
 }
 
 .restaurant-card__details {
@@ -182,49 +201,6 @@ li {
   height: 100%;
   object-fit: cover;
   border-radius: 1.2rem 1.2rem 0 0;
-}
-
-/*Restaurant Home*/
-/*Footer*/
-footer {
-  background-color: #353535;
-  line-height: 1.8rem;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-}
-footer h2 {
-  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
-  color: white;
-  font-weight: 300;
-}
-footer ul {
-  list-style-type: none;
-}
-footer a {
-  color: white;
-  text-decoration: none;
-}
-footer .fas {
-  padding-left: 0;
-  color: white;
-}
-
-.footer__logo {
-  padding-left: 1.9rem;
-}
-
-/*footer*/
-/*----------------------Next pages---------------------*/
-/*Menu Pages*/
-.header__menu {
-  text-align: left;
-}
-.header__menu div {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-.header__menu img {
-  width: 10rem;
 }
 
 .menu__title {
@@ -257,7 +233,7 @@ footer .fas {
   width: 60px;
 }
 
-.choose, .desserts__details, .dishes__details, .starters__details {
+.starters__details {
   background-color: white;
   border-radius: 1rem;
   padding: 0 1rem 0rem 1rem;
@@ -268,7 +244,37 @@ footer .fas {
   align-items: center;
   justify-content: space-between;
 }
-.choose:hover, .desserts__details:hover, .dishes__details:hover, .starters__details:hover {
+.starters__details:hover {
+  box-shadow: 0 4px 10px 0 rgba(39, 39, 39, 0.363);
+}
+
+.dishes__details {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 0 1rem 0rem 1rem;
+  margin: 1rem 0 1rem 0;
+  line-height: 1;
+  box-shadow: 0 4px 8px 0 rgba(39, 39, 39, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dishes__details:hover {
+  box-shadow: 0 4px 10px 0 rgba(39, 39, 39, 0.363);
+}
+
+.desserts__details {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 0 1rem 0rem 1rem;
+  margin: 1rem 0 1rem 0;
+  line-height: 1;
+  box-shadow: 0 4px 8px 0 rgba(39, 39, 39, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.desserts__details:hover {
   box-shadow: 0 4px 10px 0 rgba(39, 39, 39, 0.363);
 }
 
@@ -276,7 +282,58 @@ footer .fas {
   font-weight: bold;
 }
 
-/*Menu pages*/
+.order__button {
+  box-shadow: 0 4px 8px 0 rgba(39, 39, 39, 0.2);
+  padding: 1rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  margin: auto;
+  width: 12rem;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+.order__button:hover {
+  box-shadow: 0 4px 10px 0 rgba(39, 39, 39, 0.363);
+  background: linear-gradient(#ff79d9af, #9256dcb0);
+}
+.order__button a {
+  color: white;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #353535;
+  line-height: 1.8rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+footer h2 {
+  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: 300;
+}
+footer ul {
+  list-style-type: none;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer .fas {
+  padding-left: 0;
+  color: white;
+}
+
+.footer__logo {
+  width: 12rem;
+  padding-left: 1.9rem;
+}
+
 /*----------------------Media Queries---------------------*/
 /*Tablette version*/
 @media (min-width: 601px) and (max-width: 1023px) {
@@ -292,7 +349,7 @@ footer .fas {
   footer {
     text-align: center;
   }
-  footer .logo, footer .header__logo, footer .footer__logo {
+  footer .footer__logo {
     margin: auto;
   }
 
@@ -339,7 +396,6 @@ footer .fas {
   .menu {
     border-radius: 0;
     display: grid;
-    grid-template-areas: "menu__title, starters dishes desserts, order";
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 10% 70% 10%;
     gap: 1rem;
@@ -361,6 +417,7 @@ footer .fas {
     grid-row: 2;
   }
   .menu .order__button {
+    margin: auto;
     grid-column: 1/4;
     grid-row: 3;
   }
@@ -369,7 +426,7 @@ footer .fas {
     text-align: center;
     position: sticky;
   }
-  footer .logo, footer .header__logo, footer .footer__logo {
+  footer .footer__logo {
     margin: auto;
   }
 

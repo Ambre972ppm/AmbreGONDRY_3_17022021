@@ -1,0 +1,27 @@
+footer 
+{
+    background-color: #353535;
+    line-height: 1.8rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    & h2{
+        font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
+        color: $txt-secondary-color;
+        font-weight: 300;
+    }
+    & ul{
+    list-style-type: none;
+    }
+    & a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    }
+    & .fas{
+    padding-left: 0;
+    color: $txt-secondary-color;
+    }
+}
+.footer__logo{
+    @include logo-size;
+    padding-left: 1.9rem;
+}
