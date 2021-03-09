@@ -1,0 +1,52 @@
+
+.menu__title{
+    font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+.preview{
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu{
+    background-color: #f6f6f6;
+    border-radius: 1.5rem 1.5rem 0 0;
+    position: sticky;
+    padding: 1rem;
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
+    & h2{
+        text-transform: uppercase;
+        padding-bottom: 0.5rem;
+        font-weight: normal;
+        border-bottom : 3px solid#99E2D0;
+        width: 60px;
+    }
+}
+
+.starters__details{
+    @include choose;
+}
+
+.dishes__details{
+    @include choose;
+}
+
+.desserts__details{
+    @include choose;
+}
+
+.price{
+    font-weight: bold;
+}
+
+.order__button{
+    @include btn;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}

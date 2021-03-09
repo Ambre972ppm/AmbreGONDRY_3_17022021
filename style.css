@@ -25,8 +25,6 @@ img {
   font-size: 20px;
 }
 
-/*general settings*/
-/*Home settings*/
 /*home header*/
 header {
   padding: 1rem;
@@ -44,6 +42,19 @@ header .fas {
 }
 
 /*home header*/
+/*menu pages header*/
+.header__menu {
+  text-align: left;
+}
+.header__menu div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.header__menu img {
+  width: 10rem;
+}
+
+/*menu pages header*/
 /*position section*/
 .position {
   background-color: #eaeaea;
@@ -152,6 +163,7 @@ li {
   padding-left: 1.5rem;
 }
 
+/*Restaurant Home*/
 .restaurant-card__prev {
   display: grid;
   grid-template-rows: 70% 30%;
@@ -161,9 +173,20 @@ li {
   border-radius: 1.2rem;
   height: 250px;
   margin: 1rem;
+  position: relative;
 }
 .restaurant-card__prev:hover {
   box-shadow: 0 4px 10px 0 rgba(39, 39, 39, 0.363);
+}
+.restaurant-card__prev .new {
+  position: absolute;
+  color: #008766;
+  font-weight: bold;
+  background-color: #99e2d0;
+  padding: 0.5rem;
+  border-radius: 5%;
+  top: 0.5rem;
+  right: 1rem;
 }
 
 .restaurant-card__details {
@@ -178,50 +201,6 @@ li {
   height: 100%;
   object-fit: cover;
   border-radius: 1.2rem 1.2rem 0 0;
-}
-
-/*Restaurant Home*/
-/*Footer*/
-footer {
-  background-color: #353535;
-  line-height: 1.8rem;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-}
-footer h2 {
-  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
-  color: white;
-  font-weight: 300;
-}
-footer ul {
-  list-style-type: none;
-}
-footer a {
-  color: white;
-  text-decoration: none;
-}
-footer .fas {
-  padding-left: 0;
-  color: white;
-}
-
-.footer__logo {
-  width: 12rem;
-  padding-left: 1.9rem;
-}
-
-/*footer*/
-/*----------------------Next pages---------------------*/
-/*Menu Pages*/
-.header__menu {
-  text-align: left;
-}
-.header__menu div {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-.header__menu img {
-  width: 10rem;
 }
 
 .menu__title {
@@ -327,7 +306,34 @@ footer .fas {
   font-weight: bold;
 }
 
-/*Menu pages*/
+footer {
+  background-color: #353535;
+  line-height: 1.8rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+footer h2 {
+  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: 300;
+}
+footer ul {
+  list-style-type: none;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer .fas {
+  padding-left: 0;
+  color: white;
+}
+
+.footer__logo {
+  width: 12rem;
+  padding-left: 1.9rem;
+}
+
 /*----------------------Media Queries---------------------*/
 /*Tablette version*/
 @media (min-width: 601px) and (max-width: 1023px) {

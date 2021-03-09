@@ -1,0 +1,84 @@
+
+/*position section*/
+.position{
+    background-color: #eaeaea;
+    align-items: center;
+    font-size:larger;
+    color: $txt-primary-color;
+    @include placement;
+    i{
+        color: $txt-primary-color;
+        padding-left: 0;
+    }
+}
+/*postion section*/
+
+/*search section*/
+.search{
+    text-align: center;
+    background: #f6f6f6;
+    padding: 2rem 2rem 3rem 2rem;
+    &__button{
+        @include btn;
+    }
+}
+/*search section*/
+
+/*operation section*/
+.operation{
+    @include padding;
+}
+.operation__title{
+    @include ttl-padding;
+}
+.operation li{
+    background-color: #f6f6f6;
+    margin-top: 1rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    @include shadow;
+    font-weight: bold;
+    & .fas{
+        color: #7e7e7e;
+        &:hover{
+            color: #9356DC;
+        }
+    }
+    &:hover{
+    background-color:#9256dc25;
+    @include shadow-hover;
+    }
+    &::before {
+        content: counter(li); 
+        color: $txt-secondary-color;
+        display: inline-block; 
+        width: 1.1rem;
+        padding: 0.3rem;
+        background-color: #9356DC;
+        border-radius:inherit ;
+        margin-left: -2rem;
+        text-align: center;
+        font-weight: initial;
+    }
+}
+ol {
+    list-style: none; 
+    counter-reset: li;
+    padding:  0 1rem 0rem 1rem;
+}
+li {
+    counter-increment: li;
+    font-size: smaller;
+}
+/*operation section*/
+
+/*Restaurant Home*/
+.restaurant{
+    background-color: #f6f6f6;
+    @include padding;
+}
+.restaurant__title{
+    @include ttl-padding;
+}
+/*Restaurant Home*/
+

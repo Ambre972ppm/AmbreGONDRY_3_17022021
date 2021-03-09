@@ -1,0 +1,59 @@
+@mixin ttl-padding {
+    padding-left: 1.5rem;
+}
+@mixin shadow{
+    box-shadow: 0 4px 8px 0 rgba(39, 39, 39, 0.2);
+}
+@mixin shadow-hover{
+    box-shadow : 0 4px 10px 0 rgba(39, 39, 39, 0.363);
+}
+@mixin btn{
+    @include shadow;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    background:linear-gradient(#FF79DA,#9356DC);
+    color: $txt-secondary-color;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+    width: 12rem;
+    &:hover{
+        @include shadow-hover;
+        background:linear-gradient(#ff79d9af,#9256dcb0);
+    }
+    & a{
+        color:$txt-secondary-color;
+        font-weight: bold;
+    }
+}
+@mixin logo-size{
+    width: 12rem;
+}
+@mixin margin{
+    margin: auto;
+}
+@mixin padding{
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+@mixin placement{
+    display: flex;
+    justify-content: center;
+}
+
+@mixin choose{
+    background-color: white;
+    border-radius: 1rem;
+    padding:  0 1rem 0rem 1rem;
+    margin: 1rem 0 1rem 0;
+    line-height: 1;
+    @include shadow;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &:hover{
+    @include shadow-hover;
+    }
+}
