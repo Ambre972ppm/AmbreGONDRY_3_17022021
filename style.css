@@ -25,7 +25,9 @@ img {
   font-size: 20px;
 }
 
-/*home header*/
+/*general settings*/
+/*HEADER*/
+/*HOME header*/
 header {
   padding: 1rem;
   box-shadow: 2px 2px 5px 2px rgba(39, 39, 39, 0.199);
@@ -42,7 +44,7 @@ header .fas {
 }
 
 /*home header*/
-/*menu pages header*/
+/*MENU PAGES header*/
 .header__menu {
   text-align: left;
 }
@@ -51,10 +53,131 @@ header .fas {
   grid-template-columns: repeat(3, 1fr);
 }
 .header__menu img {
-  width: 10rem;
+  width: 12rem;
+  margin: auto;
 }
 
 /*menu pages header*/
+/*HEADER*/
+/*home restaurant cards*/
+.restaurant-card__prev {
+  display: grid;
+  grid-template-rows: 70% 30%;
+  box-shadow: 0 4px 8px 0 rgba(39, 39, 39, 0.2);
+  transition: 0.3s;
+  background-color: white;
+  border-radius: 1.2rem;
+  height: 250px;
+  margin: 1rem;
+  position: relative;
+}
+.restaurant-card__prev:hover {
+  box-shadow: 0 4px 10px 0 rgba(39, 39, 39, 0.363);
+}
+.restaurant-card__prev .new {
+  position: absolute;
+  color: #008766;
+  font-weight: bold;
+  background-color: #99e2d0;
+  padding: 0.5rem;
+  border-radius: 5%;
+  top: 0.5rem;
+  right: 1rem;
+}
+
+.restaurant-card__details {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  line-height: 0.7rem;
+  align-items: center;
+}
+
+.restaurant img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.2rem 1.2rem 0 0;
+}
+
+/*home restaurant cards*/
+/*Tablette version*/
+@media (min-width: 601px) and (max-width: 1023px) {
+  .restaurant__cards {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/*Tablette version*/
+/*Desktop version*/
+@media (min-width: 1024px) {
+  /*home page*/
+  .restaurant__cards {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/*Desktop Version*/
+/*FOOTER*/
+footer {
+  background-color: #353535;
+  line-height: 1.8rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+footer h2 {
+  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: 300;
+}
+footer ul {
+  list-style-type: none;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer .fas {
+  padding-left: 0;
+  color: white;
+}
+
+.footer__logo {
+  width: 12rem;
+  padding-left: 1.9rem;
+}
+
+/*Tablette version*/
+@media (min-width: 601px) and (max-width: 1023px) {
+  /*footer*/
+  footer {
+    text-align: center;
+  }
+  footer .footer__logo {
+    margin: auto;
+  }
+
+  /*footer*/
+}
+/*Tablette version*/
+/*Desktop version*/
+@media (min-width: 1024px) {
+  footer {
+    text-align: center;
+    position: sticky;
+  }
+  footer .footer__logo {
+    margin: auto;
+  }
+
+  /*Desktop Version*/
+}
+/*FOOTER*/
+/*HOME*/
 /*position section*/
 .position {
   background-color: #eaeaea;
@@ -152,6 +275,20 @@ li {
 }
 
 /*operation section*/
+/*Desktop version*/
+@media (min-width: 1024px) {
+  /*home page*/
+  .operation ol {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem;
+  }
+  .operation ol li {
+    width: 33%;
+  }
+
+  /*Desktop Version*/
+}
 /*Restaurant Home*/
 .restaurant {
   background-color: #f6f6f6;
@@ -164,45 +301,8 @@ li {
 }
 
 /*Restaurant Home*/
-.restaurant-card__prev {
-  display: grid;
-  grid-template-rows: 70% 30%;
-  box-shadow: 0 4px 8px 0 rgba(39, 39, 39, 0.2);
-  transition: 0.3s;
-  background-color: white;
-  border-radius: 1.2rem;
-  height: 250px;
-  margin: 1rem;
-  position: relative;
-}
-.restaurant-card__prev:hover {
-  box-shadow: 0 4px 10px 0 rgba(39, 39, 39, 0.363);
-}
-.restaurant-card__prev .new {
-  position: absolute;
-  color: #008766;
-  font-weight: bold;
-  background-color: #99e2d0;
-  padding: 0.5rem;
-  border-radius: 5%;
-  top: 0.5rem;
-  right: 1rem;
-}
-
-.restaurant-card__details {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  line-height: 0.7rem;
-  align-items: center;
-}
-
-.restaurant img {
-  height: 100%;
-  object-fit: cover;
-  border-radius: 1.2rem 1.2rem 0 0;
-}
-
+/*HOME*/
+/*MENU PAGES*/
 .menu__title {
   font-family: "Shrikhand", Arial, Helvetica, sans-serif;
   font-weight: 300;
@@ -306,99 +406,28 @@ li {
   font-weight: bold;
 }
 
-footer {
-  background-color: #353535;
-  line-height: 1.8rem;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-}
-footer h2 {
-  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
-  color: white;
-  font-weight: 300;
-}
-footer ul {
-  list-style-type: none;
-}
-footer a {
-  color: white;
-  text-decoration: none;
-}
-footer .fas {
-  padding-left: 0;
-  color: white;
-}
-
-.footer__logo {
-  width: 12rem;
-  padding-left: 1.9rem;
-}
-
-/*----------------------Media Queries---------------------*/
-/*Tablette version*/
-@media (min-width: 601px) and (max-width: 1023px) {
-  /*home page*/
-  .restaurant__cards {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-    align-items: center;
-    justify-content: center;
-  }
-
-  footer {
-    text-align: center;
-  }
-  footer .footer__logo {
-    margin: auto;
-  }
-
-  /*home page*/
-}
-/*Tablette version*/
 /*Desktop version*/
 @media (min-width: 1024px) {
-  /*home page*/
-  .operation ol {
-    display: flex;
-    gap: 2rem;
-    margin: 1rem;
-  }
-  .operation ol li {
-    width: 33%;
-  }
-
-  .restaurant__cards {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /*home page*/
-  /*Menu Pages*/
-  .header__menu div {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .main__menu {
     display: grid;
     grid-template-areas: "preview menu";
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 100%;
+    grid-template-rows: 30% 70%;
+    grid-template-columns: 100%;
     position: relative;
   }
   .main__menu img {
-    height: 91vh;
+    height: 300px;
+    grid-row: 1;
     object-fit: cover;
   }
 
   .menu {
-    border-radius: 0;
+    grid-row: 2;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 10% 70% 10%;
+    grid-template-rows: 10% 70% 20%;
     gap: 1rem;
+    padding-bottom: 2rem;
   }
   .menu__title {
     grid-column: 1/4;
@@ -422,16 +451,8 @@ footer .fas {
     grid-row: 3;
   }
 
-  footer {
-    text-align: center;
-    position: sticky;
-  }
-  footer .footer__logo {
-    margin: auto;
-  }
-
-  /*Menu pages*/
+  /*Desktop Version*/
 }
-/*Desktop Version*/
+/*MENU PAGES*/
 
 /*# sourceMappingURL=style.css.map */
