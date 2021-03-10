@@ -71,7 +71,19 @@ li {
     font-size: smaller;
 }
 /*operation section*/
-
+/*Desktop version*/
+@media (min-width: 1024px){
+    /*home page*/
+.operation ol{
+    display: flex;
+    gap: 2rem;
+    margin: 1rem;
+    & li{
+        width: 33%;
+    }
+}
+/*Desktop Version*/
+}
 /*Restaurant Home*/
 .restaurant{
     background-color: #f6f6f6;
