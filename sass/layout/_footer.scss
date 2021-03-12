@@ -5,6 +5,12 @@ footer
     line-height: 1.8rem;
     padding-top: 1rem;
     padding-bottom: 2rem;
+    @include larger-screens{
+        text-align: center;
+    }
+    @include desktop{
+        position: sticky;
+    }
     & h2{
         font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
         color: $txt-secondary-color;
@@ -25,28 +31,9 @@ footer
 .footer__logo{
     @include logo-size;
     padding-left: 1.9rem;
-}
-/*Tablette version*/
-@media (min-width: 601px) and (max-width: 1023px){
-    /*footer*/
-    footer{
-        text-align: center;
-        .footer__logo{
-            @include margin;
-        }
-    }
-    /*footer*/
- }
-/*Tablette version*/
-/*Desktop version*/
-@media (min-width: 1024px){
-footer{
-    text-align: center;
-    position: sticky;
-    .footer__logo{
+    @include larger-screens{
         @include margin;
     }
 }
-/*Desktop Version*/
-}
+
 /*FOOTER*/

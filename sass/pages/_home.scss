@@ -23,7 +23,6 @@
     }
 }
 /*search section*/
-
 /*operation section*/
 .operation{
     @include padding;
@@ -31,34 +30,44 @@
 .operation__title{
     @include ttl-padding;
 }
-.operation li{
-    background-color: #f6f6f6;
-    margin-top: 1rem;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    @include shadow;
-    font-weight: bold;
-    & .fas{
-        color: #7e7e7e;
-        &:hover{
-            color: #9356DC;
+.operation ol{
+    @include desktop{
+        display: flex;
+        gap: 2rem;
+        margin: 1rem;
+    }
+        li{
+        background-color: #f6f6f6;
+        margin-top: 1rem;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        @include shadow;
+        font-weight: bold;
+        @include desktop{
+            width: 33%;
         }
-    }
-    &:hover{
-    background-color:#9256dc25;
-    @include shadow-hover;
-    }
-    &::before {
-        content: counter(li); 
-        color: $txt-secondary-color;
-        display: inline-block; 
-        width: 1.1rem;
-        padding: 0.3rem;
-        background-color: #9356DC;
-        border-radius:inherit ;
-        margin-left: -2rem;
-        text-align: center;
-        font-weight: initial;
+        & .fas{
+            color: #7e7e7e;
+            &:hover{
+                color: #9356DC;
+            }
+        }
+        &:hover{
+        background-color:#9256dc25;
+        @include shadow-hover;
+        }
+        &::before {
+            content: counter(li); 
+            color: $txt-secondary-color;
+            display: inline-block; 
+            width: 1.1rem;
+            padding: 0.3rem;
+            background-color: #9356DC;
+            border-radius:inherit ;
+            margin-left: -2rem;
+            text-align: center;
+            font-weight: initial;
+        }
     }
 }
 ol {
@@ -71,19 +80,6 @@ li {
     font-size: smaller;
 }
 /*operation section*/
-/*Desktop version*/
-@media (min-width: 1024px){
-    /*home page*/
-.operation ol{
-    display: flex;
-    gap: 2rem;
-    margin: 1rem;
-    & li{
-        width: 33%;
-    }
-}
-/*Desktop Version*/
-}
 /*Restaurant Home*/
 .restaurant{
     background-color: #f6f6f6;

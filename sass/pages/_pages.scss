@@ -1,4 +1,19 @@
 /*MENU PAGES*/
+.main__menu{
+    @include desktop{
+        display: grid;
+        grid-template-areas: "preview menu";
+        grid-template-rows: 30% 70%;
+        grid-template-columns: 100%;
+        position: relative;
+        & img{
+            height: 300px;
+            grid-row: 1;
+            object-fit: cover;
+        }
+    }
+}
+
 .menu__title{
     font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
     font-weight: 300;
@@ -14,11 +29,23 @@
     border-radius: 1.5rem 1.5rem 0 0;
     position: sticky;
     padding: 1rem;
+    @include desktop{
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 10% 70% 20%;
+        gap: 1rem;
+        padding-bottom: 2rem;
+    }
     &__title{
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: 0;
+        @include desktop{
+            grid-column: 1 / 4;
+            grid-row: 1;
+        }
     }
     & h2{
         text-transform: uppercase;
@@ -28,18 +55,36 @@
         width: 60px;
     }
 }
-
-.starters__details{
-    @include choose;
+.starters{
+    @include desktop{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    &__details{
+        @include choose;
+    }
 }
 
-.dishes__details{
-    @include choose;
+.dishes{
+    @include desktop{
+        grid-column: 2;
+        grid-row: 2;
+    }
+    &__details{
+        @include choose;
+    }
 }
 
-.desserts__details{
-    @include choose;
+.desserts{
+    @include desktop{
+        grid-column: 3;
+        grid-row: 2;
+    }
+    &__details{
+        @include choose;
+    }
 }
+
 
 .price{
     font-weight: bold;
@@ -49,50 +94,10 @@
     @include btn;
     margin-top: 3rem;
     margin-bottom: 4rem;
-}
-/*Desktop version*/
-@media (min-width: 1024px){
-.main__menu{
-    display: grid;
-    grid-template-areas: "preview menu";
-    grid-template-rows: 30% 70%;
-    grid-template-columns: 100%;
-    position: relative;
-    & img{
-        height: 300px;
-        grid-row: 1;
-        object-fit: cover;
-    }
-}
-.menu{
-    grid-row: 2;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 10% 70% 20%;
-    gap: 1rem;
-    padding-bottom: 2rem;
-    &__title{
-        grid-column: 1 / 4;
-        grid-row: 1;
-    }
-    .starters{
-        grid-column: 1;
-        grid-row: 2;
-    }
-    .dishes{
-        grid-column: 2;
-        grid-row: 2;
-    }
-    .starters{
-        grid-column: 3;
-        grid-row: 2;
-    }
-    .order__button{
+    @include desktop{
         margin: auto;
         grid-column: 1 / 4;
         grid-row: 3;
     }
-}
-/*Desktop Version*/    
 }
 /*MENU PAGES*/

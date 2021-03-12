@@ -1,3 +1,21 @@
+@mixin tablette{
+    @media (min-width: 601px) and (max-width: 1023px){
+        @content
+    };
+}
+
+@mixin desktop{
+    @media (min-width: 1024px) {
+        @content
+    };
+}
+
+@mixin larger-screens {
+    @media (min-width: 601px){
+        @content
+    }
+}
+
 @mixin ttl-padding {
     padding-left: 1.5rem;
 }
@@ -7,27 +25,7 @@
 @mixin shadow-hover{
     box-shadow : 0 4px 10px 0 rgba(39, 39, 39, 0.363);
 }
-@mixin btn{
-    @include shadow;
-    padding: 1rem;
-    border-radius: 2rem;
-    border: 1px solid transparent;
-    background:linear-gradient(#FF79DA,#9356DC);
-    color: $txt-secondary-color;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    margin: auto;
-    width: 12rem;
-    &:hover{
-        @include shadow-hover;
-        background:linear-gradient(#ff79d9af,#9256dcb0);
-    }
-    & a{
-        color:$txt-secondary-color;
-        font-weight: bold;
-    }
-}
+
 @mixin logo-size{
     width: 12rem;
 }
@@ -42,7 +40,6 @@
     display: flex;
     justify-content: center;
 }
-
 @mixin choose{
     background-color: white;
     border-radius: 1rem;

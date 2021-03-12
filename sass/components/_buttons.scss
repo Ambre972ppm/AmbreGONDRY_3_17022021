@@ -1,0 +1,21 @@
+@mixin btn{
+    @include shadow;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    background:linear-gradient(#FF79DA,#9356DC);
+    color: $txt-secondary-color;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+    width: 12rem;
+    &:hover{
+        @include shadow-hover;
+        background:linear-gradient(#ff79d9af,#9256dcb0);
+    }
+    & a{
+        color:$txt-secondary-color;
+        font-weight: bold;
+    }
+}
