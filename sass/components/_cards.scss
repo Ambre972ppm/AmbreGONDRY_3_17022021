@@ -1,4 +1,19 @@
 /*home restaurant cards*/
+.restaurant__cards{
+    @include tablette{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        align-items: center;
+        justify-content: center;
+    }
+    @include desktop{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        align-items: center;
+        justify-content: center;
+    }
+}
 .restaurant-card__prev{
     display: grid;
     grid-template-rows: 70% 30%;
@@ -36,25 +51,3 @@
     border-radius: 1.2rem 1.2rem 0 0;
 }
 /*home restaurant cards*/
-/*Tablette version*/
-@media (min-width: 601px) and (max-width: 1023px){
-.restaurant__cards{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-    align-items: center;
-    justify-content: center;
-        }
-}
-/*Tablette version*/
-/*Desktop version*/
-@media (min-width: 1024px){
-/*home page*/
-.restaurant__cards{
-        display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
-        align-items: center;
-        justify-content: center;
-    }
-}
-/*Desktop Version*/
