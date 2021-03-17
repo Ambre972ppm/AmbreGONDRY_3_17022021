@@ -2,17 +2,20 @@
     @include shadow;
     padding: 1rem;
     border-radius: 2rem;
-    border: 1px solid transparent;
-    background:linear-gradient(#FF79DA,#9356DC);
+    border: none;
+    background:$btn-color;
     color: $txt-secondary-color;
     align-items: center;
     align-content: center;
     text-align: center;
     margin: auto;
     width: 12rem;
+    cursor: pointer;
+    transition: all 400ms;
     &:hover{
         @include shadow-hover;
-        background:linear-gradient(#ff79d9af,#9256dcb0);
+        transform: scale(1.05);
+        background: $btn-color-hover;
     }
     & a{
         color:$txt-secondary-color;
