@@ -30,17 +30,9 @@ img {
 .empty {
   cursor: pointer;
 }
-.empty:hover {
-  display: none;
-}
 
 .full {
   display: none;
-  background-color: transparent;
-}
-.full:hover {
-  color: linear-gradient(#ff79d9af, #9256dcb0);
-  cursor: pointer;
 }
 
 /*like*/
@@ -207,7 +199,7 @@ footer .fas {
   box-shadow: 0 4px 8px 0 rgba(39, 39, 39, 0.2);
   padding: 1rem;
   border-radius: 2rem;
-  border: 1px solid transparent;
+  border: none;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
   align-items: center;
@@ -215,10 +207,13 @@ footer .fas {
   text-align: center;
   margin: auto;
   width: 12rem;
+  cursor: pointer;
+  transition: all 400ms;
 }
 .search__button:hover {
   box-shadow: 0 4px 10px 0 rgba(39, 39, 39, 0.363);
-  background: linear-gradient(#ff79d9af, #9256dcb0);
+  transform: scale(1.05);
+  background: linear-gradient(#ff79d9d2, #9256dcd5);
 }
 .search__button a {
   color: white;
@@ -437,7 +432,7 @@ li {
   box-shadow: 0 4px 8px 0 rgba(39, 39, 39, 0.2);
   padding: 1rem;
   border-radius: 2rem;
-  border: 1px solid transparent;
+  border: none;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
   align-items: center;
@@ -445,12 +440,15 @@ li {
   text-align: center;
   margin: auto;
   width: 12rem;
+  cursor: pointer;
+  transition: all 400ms;
   margin-top: 3rem;
   margin-bottom: 4rem;
 }
 .order__button:hover {
   box-shadow: 0 4px 10px 0 rgba(39, 39, 39, 0.363);
-  background: linear-gradient(#ff79d9af, #9256dcb0);
+  transform: scale(1.05);
+  background: linear-gradient(#ff79d9d2, #9256dcd5);
 }
 .order__button a {
   color: white;

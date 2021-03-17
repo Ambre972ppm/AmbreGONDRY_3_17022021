@@ -5,17 +5,10 @@
 
 .empty{
     cursor: pointer;
-    &:hover{
-        display: none;
-    }
+
 }
     
 .full{
     display: none;
-    background-color: transparent;
-    &:hover{
-    color:linear-gradient(#ff79d9af,#9256dcb0);
-    cursor: pointer;
-    }
 }
 /*like*/
