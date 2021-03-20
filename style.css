@@ -23,16 +23,36 @@ img {
 
 /*general settings*/
 /*like*/
+.restaurant-card__like .menu__like {
+  position: relative;
+}
+
 .fa-heart {
+  position: absolute;
   font-size: 28px;
+  padding: 0;
 }
 
 .empty {
   cursor: pointer;
+  opacity: 80%;
+  transition: opacity 800ms;
+}
+.empty:hover {
+  opacity: 0%;
 }
 
 .full {
-  display: none;
+  background-image: linear-gradient(#ff79DA, #9356DC);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  opacity: 0%;
+  transition: opacity 1s;
+}
+.full:hover {
+  opacity: 100%;
 }
 
 /*like*/
@@ -73,7 +93,7 @@ img {
   position: absolute;
   color: #008766;
   font-weight: bold;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   padding: 0.5rem;
   border-radius: 5%;
   top: 0.5rem;
@@ -86,6 +106,11 @@ img {
   padding: 1rem;
   line-height: 0.7rem;
   align-items: center;
+}
+
+.restaurant-card__like .fa-heart {
+  bottom: 1.5rem;
+  right: 1rem;
 }
 
 .restaurant img {
@@ -200,7 +225,7 @@ footer .fas {
   padding: 1rem;
   border-radius: 2rem;
   border: none;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#ff79DA, #9356DC);
   color: white;
   align-items: center;
   align-content: center;
@@ -214,6 +239,10 @@ footer .fas {
   box-shadow: 0 4px 10px 0 rgba(39, 39, 39, 0.363);
   transform: scale(1.05);
   background: linear-gradient(#ff79d9d2, #9256dcd5);
+}
+.search__button:active {
+  transform: scale(1);
+  background: linear-gradient(#e022aad2, #6e26c5d5);
 }
 .search__button a {
   color: white;
@@ -254,12 +283,12 @@ footer .fas {
 .operation ol li .fas {
   color: #7e7e7e;
 }
-.operation ol li .fas:hover {
-  color: #9356DC;
-}
 .operation ol li:hover {
   background-color: #9256dc25;
   box-shadow: 0 4px 10px 0 rgba(39, 39, 39, 0.363);
+}
+.operation ol li:hover ::before {
+  color: #9356DC;
 }
 .operation ol li::before {
   content: counter(li);
@@ -360,6 +389,10 @@ li {
   border-bottom: 3px solid #99E2D0;
   width: 60px;
 }
+.menu__like .fa-heart {
+  top: 2rem;
+  right: 1.5rem;
+}
 
 @media (min-width: 1024px) {
   .starters {
@@ -433,7 +466,7 @@ li {
   padding: 1rem;
   border-radius: 2rem;
   border: none;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#ff79DA, #9356DC);
   color: white;
   align-items: center;
   align-content: center;
@@ -450,6 +483,10 @@ li {
   transform: scale(1.05);
   background: linear-gradient(#ff79d9d2, #9256dcd5);
 }
+.order__button:active {
+  transform: scale(1);
+  background: linear-gradient(#e022aad2, #6e26c5d5);
+}
 .order__button a {
   color: white;
   font-weight: bold;
@@ -460,6 +497,33 @@ li {
     grid-column: 1/4;
     grid-row: 3;
   }
+}
+
+.dish {
+  position: relative;
+  cursor: pointer;
+}
+.dish:hover > .selected {
+  transform: scaleX(1);
+}
+.dish:hover > .selected > i {
+  transform: rotate(0);
+}
+.dish .selected {
+  position: absolute;
+  right: 0;
+  padding: 1.75rem 1rem 1.75rem 1rem;
+  border-radius: 0 1rem 1rem 0;
+  background-color: #99E2D0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 800ms;
+}
+.dish .selected i {
+  color: white;
+  font-size: 2rem;
+  transform: rotate(95deg);
+  transition: transform 800ms;
 }
 
 /*MENU PAGES*/
