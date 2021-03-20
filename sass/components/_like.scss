@@ -1,14 +1,32 @@
 /*like*/
+.restaurant-card__like .menu__like{
+    position: relative;
+}
 .fa-heart{
+    position: absolute;
     font-size: 28px;
+    padding: 0;
 }
 
 .empty{
     cursor: pointer;
-
+    opacity: 80%;
+    transition: opacity 800ms;
+    &:hover{
+        opacity: 0%;
+    }
 }
-    
+
 .full{
-    display: none;
+    background-image:$btn-color;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    opacity: 0%;
+    transition: opacity 1s;
+    &:hover{
+        opacity: 100%;
+    }
 }
 /*like*/

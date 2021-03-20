@@ -54,6 +54,12 @@
         border-bottom : 3px solid#99E2D0;
         width: 60px;
     }
+    &__like{
+        .fa-heart{
+            top: 2rem;
+            right: 1.5rem;
+        }
+    }
 }
 .starters{
     @include desktop{
@@ -100,4 +106,36 @@
         grid-row: 3;
     }
 }
+
+.dish{
+    position: relative;
+    cursor: pointer;
+    &:hover{
+        & > .selected{
+            transform: scaleX(1) ;
+            & > i{
+                transform: rotate(0);
+            }
+        }
+    }
+        
+    .selected{
+        position: absolute;
+        right: 0;
+        padding: 1.75rem 1rem 1.75rem 1rem;
+        border-radius: 0 1rem 1rem 0;
+        background-color: $color-tertiary;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 800ms;
+        i{
+            color: $txt-secondary-color;
+            font-size: 2rem;
+            transform: rotate(+95deg);
+            transition: transform 800ms;
+        }
+    }
+}
+
+
 /*MENU PAGES*/

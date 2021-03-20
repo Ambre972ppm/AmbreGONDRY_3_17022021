@@ -31,7 +31,7 @@
         position: absolute;
         color: #008766;
         font-weight: bold;
-        background-color: #99e2d0;
+        background-color: $color-tertiary;
         padding: 0.5rem;
         border-radius: 5%;
         top: 0.5rem;
@@ -44,6 +44,12 @@
     padding: 1rem;
     line-height: 0.7rem;
     align-items: center;
+}
+.restaurant-card__like{
+    .fa-heart{
+    bottom: 1.5rem;
+    right: 1rem;
+    }
 }
 .restaurant img{
     height: 100%;

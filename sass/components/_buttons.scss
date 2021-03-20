@@ -17,6 +17,10 @@
         transform: scale(1.05);
         background: $btn-color-hover;
     }
+    &:active{
+        transform: scale(1);
+        background: $btn-color-active;
+    }
     & a{
         color:$txt-secondary-color;
         font-weight: bold;

@@ -48,13 +48,13 @@
         }
         & .fas{
             color: #7e7e7e;
-            &:hover{
-                color: #9356DC;
-            }
         }
         &:hover{
         background-color:#9256dc25;
         @include shadow-hover;
+            ::before{
+                color: $color-primary;
+            }
         }
         &::before {
             content: counter(li); 
@@ -62,7 +62,7 @@
             display: inline-block; 
             width: 1.1rem;
             padding: 0.3rem;
-            background-color: #9356DC;
+            background-color: $color-primary;
             border-radius:inherit ;
             margin-left: -2rem;
             text-align: center;
