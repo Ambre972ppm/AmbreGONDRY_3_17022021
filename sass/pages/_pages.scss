@@ -98,7 +98,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     overflow-wrap: ellipsis;
     padding:  0 1rem 0 1rem;
     @include desktop{
