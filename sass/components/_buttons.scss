@@ -1,28 +1,12 @@
-@mixin btn{
-    @include shadow;
-    padding: 1rem;
-    border-radius: 2rem;
-    border: none;
-    background:$btn-color;
-    color: $txt-secondary-color;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    margin: auto;
-    width: 12rem;
-    cursor: pointer;
-    transition: all 400ms;
-    &:hover{
-        @include shadow-hover;
-        transform: scale(1.05);
-        background: $btn-color-hover;
-    }
-    &:active{
-        transform: scale(1);
-        background: $btn-color-active;
-    }
-    & a{
-        color:$txt-secondary-color;
-        font-weight: bold;
+.order__button{
+    @include btn;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    @include desktop{
+        margin: auto;
+        grid-column: 1 / 4;
+        grid-row: 3;
     }
 }

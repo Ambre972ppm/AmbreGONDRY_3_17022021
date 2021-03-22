@@ -7,9 +7,8 @@
         grid-template-columns: 100%;
         position: relative;
         & img{
-            height: 300px;
+            height: 400px;
             grid-row: 1;
-            object-fit: cover;
         }
     }
 }
@@ -20,8 +19,10 @@
 }
 
 .preview{
-    height: 200px;
-    object-fit: cover;
+    & img{
+        height: 250px;
+        object-fit: cover;
+    }
 }
 
 .menu{
@@ -29,6 +30,7 @@
     border-radius: 1.5rem 1.5rem 0 0;
     position: sticky;
     padding: 1rem;
+    margin-top: -2rem;
     @include desktop{
         grid-row: 2;
         display: grid;
@@ -91,26 +93,43 @@
     }
 }
 
-
-.price{
-    font-weight: bold;
-}
-
-.order__button{
-    @include btn;
-    margin-top: 3rem;
-    margin-bottom: 4rem;
+.dish__infos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow-wrap: ellipsis;
+    padding:  0 1rem 0 1rem;
     @include desktop{
-        margin: auto;
-        grid-column: 1 / 4;
-        grid-row: 3;
+        &:hover{
+            & > .price{
+                transform: translate(0);
+            }
+        }
+    }
+    &:hover:active{
+        & > .price{
+            transform: translate(0);
+        }
     }
 }
 
 .dish{
-    position: relative;
+    display: flex;
+    line-height: 0.8 ;
     cursor: pointer;
-    &:hover{
+    @include desktop{
+        &:hover{
+            & > .selected{
+                transform: scale(1);
+                & > i{
+                    transform: rotate(0);
+                }
+            }
+        }
+    }
+    &:hover:active{
         & > .selected{
             transform: scaleX(1) ;
             & > i{
@@ -118,20 +137,26 @@
             }
         }
     }
-        
+    .price{
+        display: flex;
+        font-weight: bold;
+        transform: translate(70px);
+        transition: transform 800ms cubic-bezier(.63,.36,.42,.81);
+    }
     .selected{
-        position: absolute;
+        position: relative;
+        display: block;
         right: 0;
-        padding: 1.75rem 1rem 1.75rem 1rem;
+        padding: 1.55rem 0.5rem 1.55rem 0.5rem;
         border-radius: 0 1rem 1rem 0;
         background-color: $color-tertiary;
         transform: scaleX(0);
         transform-origin: right;
-        transition: transform 800ms;
+        transition: transform 800ms cubic-bezier(.63,.36,.42,.81);
         i{
             color: $txt-secondary-color;
             font-size: 2rem;
-            transform: rotate(+95deg);
+            transform: rotate(360deg);
             transition: transform 800ms;
         }
     }
