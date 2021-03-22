@@ -37,6 +37,9 @@
         margin: 1rem;
     }
         li{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
         background-color: #f6f6f6;
         margin-top: 1rem;
         padding: 1.5rem;
@@ -59,9 +62,11 @@
         &::before {
             content: counter(li); 
             color: $txt-secondary-color;
-            display: inline-block; 
-            width: 1.1rem;
-            padding: 0.3rem;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            width: 1.5rem;
+            height: 1.5rem;
             background-color: $color-primary;
             border-radius:inherit ;
             margin-left: -2rem;

@@ -19,11 +19,12 @@
 @mixin ttl-padding {
     padding-left: 1.5rem;
 }
+
 @mixin shadow{
     box-shadow: 0 4px 8px 0 rgba(39, 39, 39, 0.2);
 }
 @mixin shadow-hover{
-    box-shadow : 0 4px 10px 0 rgba(39, 39, 39, 0.363);
+    box-shadow : 0 4px 10px 0 rgba(17, 17, 17, 0.507);
 }
 
 @mixin logo-size{
@@ -43,7 +44,6 @@
 @mixin choose{
     background-color: white;
     border-radius: 1rem;
-    padding:  0 1rem 0rem 1rem;
     margin: 1rem 0 1rem 0;
     line-height: 1;
     @include shadow;
@@ -52,5 +52,34 @@
     justify-content: space-between;
     &:hover{
     @include shadow-hover;
+    }
+}
+@mixin btn{
+    @include shadow;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    background:$btn-color;
+    color: $txt-secondary-color;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+    width: 12rem;
+    cursor: pointer;
+    transition: all 400ms;
+    &:hover{
+        opacity: 85%;
+        @include shadow-hover;
+        transform: scale(1.05);
+    }
+    &:active{
+        opacity: 100%;
+        transform: scale(1);
+    }
+    & a{
+        color:$txt-secondary-color;
+        font-weight: bold;
     }
 }

@@ -1,0 +1,53 @@
+.loading{
+    display: flex;
+    font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 4rem;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: loading 3000ms;
+    z-index: -1;
+   
+}
+.loading__items{
+    display: flex;
+    padding: 100%;
+    background-color: rgba(255, 255, 255, 0.89);
+    .loading__item--1, .loading__item--2, .loading__item--3{
+        color: $color-primary;
+    }
+    .loading__item--4, .loading__item--5{
+        color: $color-secondary;
+    }
+    .loading__item--6, .loading__item--7, .loading__item--8{
+        color: $color-tertiary;
+    }
+}
+
+
+@keyframes loading{
+    0% {
+        transform: rotate(0);
+    }
+    17% {
+        transform: rotate(45deg);
+        opacity: 0.5;
+    }
+    24% {
+        transform: rotate(90deg);
+    }
+    46% {
+        transform: rotate(180deg);
+    }
+    85%,100% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(360deg);
+        z-index: 1000;
+    }
+}
