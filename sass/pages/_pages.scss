@@ -70,11 +70,9 @@
         grid-row: 2;
     }
     &__details{
+        animation: opening 800ms ease-in-out;
+        animation-delay: 5ms;
         @include choose;
-        animation-name: opening, visible;
-        animation-timing-function: cubic-bezier(.63,.36,.42,.81);
-        animation-duration: 2000ms, 3300ms;
-        animation-delay: 0ms, 0ms;
     }
 }
 
@@ -84,11 +82,8 @@
         grid-row: 2;
     }
     &__details{
+        animation: opening 1600ms cubic-bezier(.63,.36,.42,.81);
         @include choose;
-        animation-name: opening, visible;
-        animation-timing-function: cubic-bezier(.63,.36,.42,.81);
-        animation-duration: 2000ms, 3300ms;
-        animation-delay: 0ms, 0ms;
     }
 }
 
@@ -98,11 +93,8 @@
         grid-row: 2;
     }
     &__details{
+        animation: opening 2400ms cubic-bezier(.63,.36,.42,.81);
         @include choose;
-        animation-name: opening, visible;
-        animation-timing-function: cubic-bezier(.63,.36,.42,.81);
-        animation-duration: 2000ms, 3300ms;
-        animation-delay: 0ms, 0ms;
     }
 }
 
@@ -181,6 +173,16 @@
     }
 }
 
+@keyframes opening{
+    0%,10%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
 // .dish__infos{
 //     display: flex;
 //     white-space: nowrap;
@@ -202,73 +204,4 @@
 //         }
 //     }
 // }
-
-
-//     .1{
-//         color: $color-primary;
-//         animation: jump 125ms;
-//         animation-delay: 2000ms;
-//     }
-//     .2{
-//         color: $color-primary;
-//         animation: jump 125ms;
-//         animation-delay: 2125ms;
-//     }
-//     .3{
-//         color: $color-primary;
-//         animation: jump 125ms;
-//         animation-delay: 2250ms;
-//     }
-//     .4{
-//         color: $color-secondary;
-//         animation: jump 125ms;
-//         animation-delay: 2375ms;
-//     }
-//     .5{
-//         color: $color-secondary;
-//         animation: jump 125ms;
-//         animation-delay: 2500ms;
-//     }
-//     .6{
-//         color: $color-tertiary;
-//         animation: jump 125ms;
-//         animation-delay: 2625ms;
-
-//     }
-//     .7{
-//         color: $color-tertiary;
-//         animation: jump 125ms;
-//         animation-delay: 2750ms;
-
-//     }
-//     .8{
-//         color: $color-tertiary;
-//         animation: jump 125ms;
-//         animation-delay: 2875ms;
-
-//     }
-//     .9{
-//         color: $color-tertiary;
-//         animation: jump 125ms;
-//         animation-delay: 2875ms;
-    
-//     }
-//     .10{
-//         color: $color-tertiary;
-//         animation: jump 125ms;
-//         animation-delay: 2875ms;
-        
-//     }
-// }
-
-@keyframes visible{
-    from{
-        opacity: 0.5;
-        z-index: 1000;
-    }
-    to{
-        opacity: 1;
-    }
-}
-
 /*MENU PAGES*/
