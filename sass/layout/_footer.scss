@@ -5,12 +5,13 @@ footer
     line-height: 1.8rem;
     padding-top: 1rem;
     padding-bottom: 2rem;
+    ul{
     @include larger-screens{
         text-align: center;
+        padding: 0;
+
     }
-    @include desktop{
-        position: sticky;
-    }
+}
     & h2{
         font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
         color: $txt-secondary-color;
@@ -29,10 +30,12 @@ footer
     }
 }
 .footer__logo{
-    @include logo-size;
     padding-left: 1.9rem;
     @include larger-screens{
-        @include margin;
+    display: flex;
+    justify-content: center;
+    padding: 0%;
+    margin:0;
     }
 }
 
