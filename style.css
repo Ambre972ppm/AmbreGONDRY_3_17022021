@@ -197,7 +197,7 @@ img {
   animation-delay: 2125ms;
 }
 .loading__items .loading__item--3 {
-  color: #9356DC;
+  color: #ff79DA;
   animation: jump 125ms;
   animation-delay: 2250ms;
 }
@@ -207,7 +207,7 @@ img {
   animation-delay: 2375ms;
 }
 .loading__items .loading__item--5 {
-  color: #ff79DA;
+  color: #99E2D0;
   animation: jump 125ms;
   animation-delay: 2500ms;
 }
