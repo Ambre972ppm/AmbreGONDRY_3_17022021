@@ -34,10 +34,11 @@
     @include desktop{
         grid-row: 2;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 32%);
         grid-template-rows: 10% 70% 20%;
         gap: 1rem;
         padding-bottom: 2rem;
+        justify-content: center;
     }
     &__title{
         display: flex;
@@ -70,6 +71,10 @@
     }
     &__details{
         @include choose;
+        animation-name: opening, visible;
+        animation-timing-function: cubic-bezier(.63,.36,.42,.81);
+        animation-duration: 2000ms, 3300ms;
+        animation-delay: 0ms, 0ms;
     }
 }
 
@@ -80,6 +85,10 @@
     }
     &__details{
         @include choose;
+        animation-name: opening, visible;
+        animation-timing-function: cubic-bezier(.63,.36,.42,.81);
+        animation-duration: 2000ms, 3300ms;
+        animation-delay: 0ms, 0ms;
     }
 }
 
@@ -90,34 +99,20 @@
     }
     &__details{
         @include choose;
+        animation-name: opening, visible;
+        animation-timing-function: cubic-bezier(.63,.36,.42,.81);
+        animation-duration: 2000ms, 3300ms;
+        animation-delay: 0ms, 0ms;
     }
 }
 
-.dish__infos{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    flex-wrap: nowrap;
-    overflow-wrap: ellipsis;
-    padding:  0 1rem 0 1rem;
-    @include desktop{
-        &:hover{
-            & > .price{
-                transform: translate(0);
-            }
-        }
-    }
-    &:hover:active{
-        & > .price{
-            transform: translate(0);
-        }
-    }
-}
 
 .dish{
-    display: flex;
-    line-height: 0.8 ;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: $dish-btn;
     cursor: pointer;
     @include desktop{
         &:hover{
@@ -126,6 +121,9 @@
                 & > i{
                     transform: rotate(0);
                 }
+            }
+            & > .price{
+                transform: translate(0);
             }
         }
     }
@@ -136,10 +134,30 @@
                 transform: rotate(0);
             }
         }
+        & > .price{
+            transform: translate(0);
+        }
     }
+
+    .dish__infos{
+        width: 90%;
+        padding-left: 1rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        h3{
+            margin: 0;
+        }
+        p{
+            margin: 0;
+        }
+    }
+
     .price{
+        width: 10%;
         display: flex;
         font-weight: bold;
+        padding-right: 1rem;
         transform: translate(70px);
         transition: transform 800ms cubic-bezier(.63,.36,.42,.81);
     }
@@ -147,14 +165,15 @@
         position: relative;
         display: block;
         right: 0;
-        padding: 1.55rem 0.5rem 1.55rem 0.5rem;
+        height: $dish-btn;
         border-radius: 0 1rem 1rem 0;
         background-color: $color-tertiary;
         transform: scaleX(0);
         transform-origin: right;
         transition: transform 800ms cubic-bezier(.63,.36,.42,.81);
-        i{
+        .fa-check-circle{
             color: $txt-secondary-color;
+            padding: 1rem;
             font-size: 2rem;
             transform: rotate(360deg);
             transition: transform 800ms;
@@ -162,5 +181,94 @@
     }
 }
 
+// .dish__infos{
+//     display: flex;
+//     white-space: nowrap;
+//     text-overflow: ellipsis;
+//     justify-content: space-between;
+//     align-items: center;
+//     width: 100%;
+//     height: $dish-btn;
+//     @include desktop{
+//         &:hover{
+//             & > .price{
+//                 transform: translate(0);
+//             }
+//         }
+//     }
+//     &:hover:active{
+//         & > .price{
+//             transform: translate(0);
+//         }
+//     }
+// }
+
+
+//     .1{
+//         color: $color-primary;
+//         animation: jump 125ms;
+//         animation-delay: 2000ms;
+//     }
+//     .2{
+//         color: $color-primary;
+//         animation: jump 125ms;
+//         animation-delay: 2125ms;
+//     }
+//     .3{
+//         color: $color-primary;
+//         animation: jump 125ms;
+//         animation-delay: 2250ms;
+//     }
+//     .4{
+//         color: $color-secondary;
+//         animation: jump 125ms;
+//         animation-delay: 2375ms;
+//     }
+//     .5{
+//         color: $color-secondary;
+//         animation: jump 125ms;
+//         animation-delay: 2500ms;
+//     }
+//     .6{
+//         color: $color-tertiary;
+//         animation: jump 125ms;
+//         animation-delay: 2625ms;
+
+//     }
+//     .7{
+//         color: $color-tertiary;
+//         animation: jump 125ms;
+//         animation-delay: 2750ms;
+
+//     }
+//     .8{
+//         color: $color-tertiary;
+//         animation: jump 125ms;
+//         animation-delay: 2875ms;
+
+//     }
+//     .9{
+//         color: $color-tertiary;
+//         animation: jump 125ms;
+//         animation-delay: 2875ms;
+    
+//     }
+//     .10{
+//         color: $color-tertiary;
+//         animation: jump 125ms;
+//         animation-delay: 2875ms;
+        
+//     }
+// }
+
+@keyframes visible{
+    from{
+        opacity: 0.5;
+        z-index: 1000;
+    }
+    to{
+        opacity: 1;
+    }
+}
 
 /*MENU PAGES*/
