@@ -102,10 +102,9 @@
 .dish{
     position: relative;
     width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
     height: $dish-btn;
     cursor: pointer;
+    overflow: hidden;
     @include desktop{
         &:hover{
             & > .selected{
@@ -132,16 +131,20 @@
     }
 
     .dish__infos{
+        overflow: hidden;
         width: 90%;
         padding-left: 1rem;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
         h3{
             margin: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         p{
             margin: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
     }
 
@@ -149,9 +152,9 @@
         width: 10%;
         display: flex;
         font-weight: bold;
-        padding-right: 1rem;
+        padding: 1rem;
         transform: translate(70px);
-        transition: transform 800ms cubic-bezier(.63,.36,.42,.81);
+        transition: transform 500ms cubic-bezier(.63,.36,.42,.81);
     }
     .selected{
         position: relative;
@@ -162,13 +165,13 @@
         background-color: $color-tertiary;
         transform: scaleX(0);
         transform-origin: right;
-        transition: transform 800ms cubic-bezier(.63,.36,.42,.81);
+        transition: transform 500ms cubic-bezier(.63,.36,.42,.81);
         .fa-check-circle{
             color: $txt-secondary-color;
             padding: 1rem;
             font-size: 2rem;
             transform: rotate(360deg);
-            transition: transform 800ms;
+            transition: transform 500ms;
         }
     }
 }

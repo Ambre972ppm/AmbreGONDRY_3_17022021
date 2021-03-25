@@ -616,10 +616,9 @@ li {
 .dish {
   position: relative;
   width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
   height: 4rem;
   cursor: pointer;
+  overflow: hidden;
 }
 @media (min-width: 1024px) {
   .dish:hover > .selected {
@@ -642,25 +641,29 @@ li {
   transform: translate(0);
 }
 .dish .dish__infos {
+  overflow: hidden;
   width: 90%;
   padding-left: 1rem;
+}
+.dish .dish__infos h3 {
+  margin: 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.dish .dish__infos h3 {
-  margin: 0;
-}
 .dish .dish__infos p {
   margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .dish .price {
   width: 10%;
   display: flex;
   font-weight: bold;
-  padding-right: 1rem;
+  padding: 1rem;
   transform: translate(70px);
-  transition: transform 800ms cubic-bezier(0.63, 0.36, 0.42, 0.81);
+  transition: transform 500ms cubic-bezier(0.63, 0.36, 0.42, 0.81);
 }
 .dish .selected {
   position: relative;
@@ -671,14 +674,14 @@ li {
   background-color: #99E2D0;
   transform: scaleX(0);
   transform-origin: right;
-  transition: transform 800ms cubic-bezier(0.63, 0.36, 0.42, 0.81);
+  transition: transform 500ms cubic-bezier(0.63, 0.36, 0.42, 0.81);
 }
 .dish .selected .fa-check-circle {
   color: white;
   padding: 1rem;
   font-size: 2rem;
   transform: rotate(360deg);
-  transition: transform 800ms;
+  transition: transform 500ms;
 }
 
 @keyframes opening {
