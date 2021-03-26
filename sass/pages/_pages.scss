@@ -12,19 +12,18 @@
         }
     }
 }
-
+//preview menu page - title and picture
 .menu__title{
     font-family: 'Shrikhand', Arial, Helvetica, sans-serif;
     font-weight: 300;
 }
-
 .preview{
     & img{
         height: 250px;
         object-fit: cover;
     }
 }
-
+//main settings menu page
 .menu{
     background-color: #f6f6f6;
     border-radius: 1.5rem 1.5rem 0 0;
@@ -64,6 +63,7 @@
         }
     }
 }
+//menu animations and positions
 .starters{
     @include desktop{
         grid-column: 1;
@@ -75,7 +75,6 @@
         @include choose;
     }
 }
-
 .dishes{
     @include desktop{
         grid-column: 2;
@@ -86,7 +85,6 @@
         @include choose;
     }
 }
-
 .desserts{
     @include desktop{
         grid-column: 3;
@@ -97,8 +95,7 @@
         @include choose;
     }
 }
-
-
+//dish selection animation
 .dish{
     position: relative;
     width: 100%;
@@ -129,7 +126,6 @@
             transform: translate(0);
         }
     }
-
     .dish__infos{
         overflow: hidden;
         width: 90%;
@@ -147,7 +143,6 @@
             text-overflow: ellipsis;
         }
     }
-
     .price{
         width: 10%;
         display: flex;
@@ -184,8 +179,6 @@
         transform: scale(1);
     }
 }
-
-
 // .dish__infos{
 //     display: flex;
 //     white-space: nowrap;
